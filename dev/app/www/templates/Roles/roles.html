@@ -1,0 +1,14 @@
+<ion-view title="Roles">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item class="item-avatar-left" ng-repeat="rol in roles" href="#/app/roles/{{rol.id}}">
+                <img ng-src="/pics/{{rol.avatar}}">
+                {{rol.power}}
+                <p>{{rol.id}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

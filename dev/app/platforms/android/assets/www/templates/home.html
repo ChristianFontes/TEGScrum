@@ -1,0 +1,50 @@
+<ion-view view-title="Dashboard">
+ <ion-pane ng-controller="ListController" >
+ <ion-content class="has-header">
+    <div class="row">
+      <div class="col col-50">
+        <div class="item item-divider">
+              <h2>List Projects</h2>
+        </div>
+        <div class="card">
+          <div class="item item-text-wrap">
+            <h2>Titulo</h2>
+            <h4>Inicio: 10/01/15</h4>
+            <h4>Fin: 10/03/15</h4>
+          </div>
+          <div class="item item-divider">
+            <h4>Status: Not Started</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="item item-text-wrap">
+            <h2>Titulo 2</h2>
+            <h4>Inicio: 15/02/15</h4>
+            <h4>Fin: 15/03/15</h4>
+          </div>
+          <div class="item item-divider">
+            <h4>Status: In progress</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="item item-divider">
+            <h2>Activity Stream</h2>
+        </div>
+        <ion-list>
+            <ion-item class="item-avatar-left">
+                <img ng-src="">
+                Juanito Perez
+                <p>Ha actualizado el status del Proyecto TwitterApi</p>
+            </ion-item>
+            <ion-item class="item-avatar-left">
+                <img ng-src="">
+                Carlos Perez
+                <p>Ha terminado la tarea Login Facebook en el Proyecto DigitalHospital</p>
+            </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-content>
+  </ion-pane>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">New Task</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewTask()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doNewTask()">
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" name="name" placeholder="Task Name" ng-model="taskData.name" required="required">
+          </label>
+          <label class="item item-input">
+            <input type="text" name="description" placeholder="Description" ng-model="taskData.description" required="required">
+          </label>
+          <div class="item range range-assertive">
+            <h2>Valor</h2>
+            <i class="icon ion-android-star-outline"></i> 
+            <input type="range" name="value" min="0" max="10" value="0" ng-model="taskData.value" required="required">
+            <i class="icon ion-android-star"></i>
+            <h2>{{taskData.value}}</h2>
+          </div>
+          <ion-item>
+            <div class="item item-divider">Type:</div>
+            <ion-radio ng-model="taskData.type" value="Feature">Feature</ion-radio>
+            <ion-radio ng-model="taskData.type" value="Bug">Bug</ion-radio>
+            <ion-radio ng-model="taskData.type" value="Chore">Chore</ion-radio>
+          </ion-item>
+          <label class="item">
+            <button class="button button-block button-positive" type="submit">Register</button>
+          </label>
+        </div>
+      </form>
+  </ion-content>
+</ion-modal-view>

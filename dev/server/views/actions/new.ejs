@@ -1,0 +1,39 @@
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100" align="center">
+    <main class="mdl-layout__content">
+        <div class="mdl-card mdl-shadow--6dp">
+            <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                <h3 class="mdl-card__title-text">Nueva Acciones</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="/actions/create" method="POST" class="form-signin">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <label class="mdl-textfield__label" class="form-control">Tipo</label>
+                        <select name="type">
+                        <option value="Blocked">Blocked</option>
+                        <option value="Incorporated">Incorporated</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Ready for Test">Ready for Test</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Accepted">Accepted</option>
+                        </select>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="user">
+                        <label class="mdl-textfield__label" class="form-control">User</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="message">
+                        <label class="mdl-textfield__label" class="form-control">Message</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="task_id">
+                        <label class="mdl-textfield__label" class="form-control">Task</label>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>

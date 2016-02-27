@@ -1,0 +1,26 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">New User Story</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewUserStory()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doNewUserStory()">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" name="nombre" placeholder="Nombre Historia de Usuario" ng-model="userstoryData.nombre" required="required">
+        </label>
+        <label class="item item-input">
+          <textarea name="descripcion" placeholder="Descripcion" ng-model="userstoryData.descripcion"></textarea>
+        </label>
+        <label class="item item-input">
+          <textarea name="Estado" placeholder="Estado" ng-model="userstoryData.estado"></textarea>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

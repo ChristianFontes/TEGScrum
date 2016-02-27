@@ -1,0 +1,23 @@
+<ion-view cache-view="false">
+    <ion-content class="has-header">
+    <div class="list card">
+        <div class="item item-divider">
+            <h2 style="float:left">All Task {{sprint.project_id.name}}</h2>
+        </div>
+        <ion-list>
+            <div ng-repeat="c in sprint.user_story">
+                <div ng-controller="ListController">
+                    <div ng-repeat="a in projects">
+                        <ion-item ng-repeat="b in a.task | filter:{ user_story_id: c.id }">
+                            <b>{{b.name}}</b>
+                            <span ng-class="insertValue(b)">{{b.value}}</span>
+                            <span>{{b.type}}</span>
+                        </ion-item>
+                    </div>
+                </div>
+            </div>
+            <td>Total: {{ getTotal() }}</td>
+        </ion-list>
+    </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,44 @@
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100" align="center">
+    <main class="mdl-layout__content">
+        <div class="mdl-card mdl-shadow--6dp">
+            <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                <h2 class="mdl-card__title-text">Nuevo Proyecto</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="/project/create" method="POST" class="form-signin">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="name">
+                        <label class="mdl-textfield__label" class="form-control">Nombre</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="row2">
+                        <label class="mdl-textfield__label" class="form-control">Campo (opcional)</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="row3">
+                        <label class="mdl-textfield__label" class="form-control">Campo (opcional)</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="user_all">
+                        <label class="mdl-textfield__label" class="form-control">Asignar Usuario</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="rol">
+                        <label class="mdl-textfield__label" class="form-control">Asignar Rol</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="sprints">
+                        <label class="mdl-textfield__label" class="form-control">Sprint</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="task">
+                        <label class="mdl-textfield__label" class="form-control">Task</label>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,38 @@
+<ion-view title="Speaker">
+    <ion-content class="has-header">
+        <div class="list card">
+            <div class="item item-thumbnail-left">
+                <img ng-src="/pics/{{speaker.pic}}">
+                <h2>{{speaker.email}}</h2>
+                <p>{{speaker.id}}</p>
+            </div>
+            <div class="item item-divider" ng-controller="AddRoleProjectCtrl">
+              <h2 style="float:left">Asignar Rol</h2>
+              <button class="button button-small button-dark" style="float:right" ng-click="AddRolToUser()">
+                <i class="icon ion-plus"></i>
+              </button>
+            </div>
+            <div class="item item-body">
+                <div ng-controller="SpeakerCtrl">
+                    <div ng-repeat="e in speaker.roles">
+                        <p>{{e.power}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item">
+                    <i class="icon ion-ribbon-a"></i>
+                    Role del Usuario
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-ribbon-b"></i>
+                    Role en el Proyecto
+                </a>
+                <a class="tab-item" ng-click="share()">
+                    <i class="icon ion-ios-paper"></i>
+                    Proyecto Actual
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

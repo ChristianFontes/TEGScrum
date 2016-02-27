@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+[ng-drag].drag-over{
+	/*Cuadro rojo*/
+    border:solid 2px green;
+}
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}

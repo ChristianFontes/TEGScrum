@@ -1,0 +1,25 @@
+<table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">ID</th>
+      <th>Nombre</th>
+      <th>Campo 1</th>
+      <th>Campo 2</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% _.each(projects, function(project){ %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric"><%= project.id %></td>
+      <td><%= project.name %></td>
+      <td><a href="/project/show/<%= project.id %>" class="mdl-button mdl-js-button mdl-button--primary">Mostrar</a></td>
+      <td>
+        <form action="/project/destroy/<%= project.id %>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" class="mdl-button mdl-js-button mdl-button--primary" value="Eliminar">
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Add Users to Project {{project.id}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeAddUser()">Close</button>
+    </div>
+    {{list_users}}
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doAddUserToProject()">
+      <div ng-controller="SpeakerListCtrl">
+        <div ng-repeat="e in speakers" ng-class="getSelectedClass(e.id)">
+        <ion-list ng-model="list_users">
+          <ion-checkbox name="selected" ng-checked="isSelected(e.id)" ng-click="updateSelection($event, e.id)">{{e.email}}
+          </ion-checkbox>
+        </ion-list>
+        </div>
+      </div>
+      <label class="item">
+        <button class="button button-block button-positive" type="submit">Add Users</button>
+      </label>
+    </form>
+  </ion-content>
+</ion-modal-view>

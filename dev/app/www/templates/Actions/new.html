@@ -1,0 +1,33 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">New Action</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewAction()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doNewAction()">
+    <div class="list">
+      <div ng-controller="ListController">
+        <div ng-repeat="a in projects | filter:{ id: taskid.project_name.id }">
+          <ion-list ng-model="list_users" ng-repeat="e in a.user_all" ng-class="getSelectedClass(e)">
+            <ion-checkbox name="selected" ng-checked="isSelected(e)" ng-click="updateSelection($event, e)">{{e.email}}</ion-checkbox>
+          </ion-list>
+        </div>
+      </div>
+      <ion-item>
+        <ion-label>Type:</ion-label>
+        <ion-radio ng-model="actionData.type" value="Incorporated">New / Incorporated</ion-radio>
+        <ion-radio ng-model="actionData.type" value="In progress">In progress</ion-radio>
+        <ion-radio ng-model="actionData.type" value="Ready for Test">Ready for Task</ion-radio>
+        <ion-radio ng-model="actionData.type" value="Accepted">Accepted</ion-radio>
+        <ion-radio ng-model="actionData.type" value="Rejected">Rejected</ion-radio>
+        <ion-radio ng-model="actionData.type" value="Blocked">Blocked</ion-radio>
+      </ion-item>
+      <label class="item">
+        <button class="button button-block button-positive" type="submit">Register</button>
+      </label>
+    </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

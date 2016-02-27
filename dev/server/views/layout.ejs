@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SCRUM</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="/styles/material.min.css"> 
+    <!--STYLES END-->
+  </head>
+
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout-icon"></div>
+      <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">SCRUM en desarrollo</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/project/new">New Project</a>
+        <a class="mdl-navigation__link" href="/sprints/new">New Sprints</a>
+        <a class="mdl-navigation__link" href="/task/new">New Task</a>
+        <a class="mdl-navigation__link" href="/actions/new">New Actions</a>
+        <a class="mdl-navigation__link" href="/user_story/new">New User Story</a>
+        <a class="mdl-navigation__link" href="/user/new">New User</a>
+        <a class="mdl-navigation__link" href="/roles/new">New Role</a>
+      </nav>
+    </header>
+    <!-- Boton abrir menu lateral-->
+    <div class="mdl-layout__drawer"> 
+      <span class="mdl-layout__title">User Name</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/">Dashboard</a>
+          <a class="mdl-navigation__link" href="/project">Projects</a>
+          <a class="mdl-navigation__link" href="/sprints">Sprints</a>
+          <a class="mdl-navigation__link" href="/task">Task</a>
+          <a class="mdl-navigation__link" href="/actions">Actions</a>
+          <a class="mdl-navigation__link" href="/user_story">User Story</a>
+          <a class="mdl-navigation__link" href="#">Files</a>
+          <a class="mdl-navigation__link" href="/user">Users</a>
+          <a class="mdl-navigation__link" class="material-icons" href="/admin">Log In</a>
+        </nav>
+    </div>
+  </div>
+  <br></br><br></br>
+  <body>
+
+    <%- body %>
+    
+    <!--SCRIPTS -->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/material.min.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

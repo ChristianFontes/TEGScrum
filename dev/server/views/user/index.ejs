@@ -1,0 +1,27 @@
+<table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">ID</th>
+      <th>Correo</th>
+      <th>Mostrar</th>
+      <th>Eliminar</th>
+    </tr>     
+  </thead>
+  <tbody>
+  <% _.each(users, function(user){ %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric"><%= user.id %></td>
+      <td><%= user.email %></td>
+      <script type="text/javascript">
+      </script>
+      <td><a href="/user/show/<%= user.id %>" class="mdl-button mdl-js-button mdl-button--primary">Mostrar</a></td> 
+      <td>
+        <form action="/user/destroy/<%= user.id %>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" class="mdl-button mdl-js-button mdl-button--primary" value="Eliminar">
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>

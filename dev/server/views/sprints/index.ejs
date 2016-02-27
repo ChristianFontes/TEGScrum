@@ -1,0 +1,29 @@
+<table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">ID</th>
+      <th>Nombre</th>
+      <th>Inicio</th>
+      <th>Final</th>
+      <th>Mostrar</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% _.each(sprints, function(sprints){ %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric"><%= sprints.id %></td>
+      <td><%= sprints.nombre %></td>
+      <td><%= sprints.inicio %></td>
+      <td><%= sprints.fin %></td>
+      <td><a href="/sprints/show/<%= sprints.id %>" class="mdl-button mdl-js-button mdl-button--primary">Mostrar</a></td>
+      <td>
+        <form action="/sprints/destroy/<%= sprints.id %>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" class="mdl-button mdl-js-button mdl-button--primary" value="Eliminar">
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>

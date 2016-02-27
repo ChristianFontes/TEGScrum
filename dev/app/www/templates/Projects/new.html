@@ -1,0 +1,26 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">New Project</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewProject()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doNewProject()">
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" name="name" placeholder="Nombre del Proyecto" ng-model="projectData.name" required="required">
+          </label>
+          <label class="item item-input">
+            <textarea name="row2" placeholder="Añadir comentario" ng-model="projectData.row2"></textarea>
+          </label>
+          <label class="item item-input">
+            <textarea name="row3" placeholder="Añadir comentario" ng-model="projectData.row3"></textarea>
+          </label>
+          <label class="item">
+            <button class="button button-block button-positive" type="submit">Register</button>
+          </label>
+        </div>
+      </form>
+  </ion-content>
+</ion-modal-view>

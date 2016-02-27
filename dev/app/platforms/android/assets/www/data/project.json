@@ -1,0 +1,23 @@
+[
+{
+rol: 2,
+name: "Project Facebook ",
+row2: "Elaborar una red social",
+row3: "Ejemplo Facebook",
+id: 3
+},
+{
+rol: 2,
+name: "Samsung Database",
+row2: "Creacion de una base de datos",
+row3: "Api Rest",
+id: 4
+},
+{
+rol: 1,
+name: "Pagina Web",
+row2: "Future web 3.0",
+row3: "Opcional Field",
+id: 5
+}
+]

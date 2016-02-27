@@ -1,0 +1,28 @@
+<ion-view cache-view="false" title="{{taskid.name}}">
+    <ion-content class="has-header">
+    <div class="list card">
+        <div class="item item-thumbnail-left">
+            <img ng-src="/pics/{{speaker.pic}}">
+            <h2>{{taskid.name}}</h2>
+            <p>{{taskid.description}}</p>
+            <p>{{taskid.id}}</p>
+        </div>
+        <div class="item item-divider" ng-controller="NewActionsCtrl">
+            <h2 style="float:left">List Actions</h2>
+            <button class="button button-small button-dark" style="float:right" ng-click="NewAction()">
+                <i class="icon ion-plus"></i>
+            </button>
+        </div>
+        <ion-list>
+        <div ng-controller="TaskIDController">
+            <div ng-repeat="a in taskid.actions">
+                <ion-item ng-repeat="d in a.user">
+                    {{d.email}}
+                    <div>{{a.type}}</div>
+                </ion-item>
+            </div>
+        </div>
+        </ion-list>
+    </div>
+    </ion-content>
+</ion-view>

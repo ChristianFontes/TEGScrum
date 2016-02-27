@@ -1,0 +1,44 @@
+<ion-view view-title="Dashboard">
+ <ion-pane>
+ <ion-content class="has-header">
+    <div class="row">
+      <div class="col">
+        <div class="item item-divider" ng-controller="NewProjectCtrl">
+        <!--<div>{{date | date:'longDate'}}</div> -->
+          <h2 style="float:left">List Projects</h2>
+          <button class="button button-small button-dark" style="float:right" ng-click="NewProject()">
+            <i class="icon ion-plus"></i>
+          </button>
+        </div>
+        <div style="float:left" class="card" ng-controller="ListController" ng-repeat="project in projects">
+          <div class="item item-text-wrap">
+            <h2>{{ project.name }}</h2>
+            <div ng-repeat="a in project.sprints">
+              <h2>{{ a.nombre }}</h2>
+              <h4>Inicio: {{ a.inicio | date:'longDate' }}</h4>
+              <h4>Fin: {{ a.fin | date:'longDate' }}</h4>
+            </div>
+          </div>
+          <div class="item item-divider">
+            <h4>Status: Not Started</h4>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="col col-60">
+        <div class="item item-divider">
+            <h2>Activity Stream</h2>
+        </div>
+        <ion-list ng-controller="SpeakerListCtrl">
+            <ion-item class="item-avatar-left" ng-repeat="user in speakers">
+                <img ng-src="">
+                {{user.email}}
+                <p>Ha actualizado el status del Proyecto TwitterApi</p>
+            </ion-item>
+        </ion-list>
+      </div>
+      -->
+    </div>
+  </ion-content>
+  </ion-pane>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Asignar Rol</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeAddRol()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doAddRole()">
+      <div class="list">
+        <div ng-controller="RolesListCtrl">
+          <div ng-repeat="e in roles" ng-class="getSelectedClass(e)">
+          <ion-list ng-model="list_users">
+            <ion-radio name="selected" ng-checked="isSelected(e)" ng-click="updateSelection($event, e)">{{e.power}}
+            </ion-radio>
+          </ion-list>
+          </div>
+        </div>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Asignar</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

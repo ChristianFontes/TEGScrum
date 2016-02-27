@@ -1,0 +1,26 @@
+<ion-view view-title="List Project">
+ <ion-pane ng-controller="ListController" >
+    <div class="bar bar-subheader item-input-inset bar-light">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input ng-model="query" type="search" placeholder="Search">
+      </label>
+    </div>
+    <ion-content class="has-subheader">
+      <ion-list>
+        <ion-item ng-repeat="project in projects |filter:query" class="item-text-wrap" href="#/app/projects/{{project.id}}">
+            <h2>{{ project.name }}</h2>
+            <h3>{{ project.row2 }}</h3>
+            <h4>{{ project.row3 }}</h4>
+            <h5>{{ project.id }}</h5>
+            <ion-delete-button class="ion-minus-circled"
+              ng-click="onItemDelete(project)">
+            </ion-delete-button>
+            <ion-reorder-button class="ion-navicon"
+              on-reorder="moveItem(project,$fromIndex,$toIndex)">
+            </ion-reorder-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    </ion-pane>
+</ion-view>

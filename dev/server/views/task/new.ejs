@@ -1,0 +1,40 @@
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100" align="center">
+    <main class="mdl-layout__content">
+        <div class="mdl-card mdl-shadow--6dp">
+            <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                <h2 class="mdl-card__title-text">Nueva Task</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="/task/create" method="POST" class="form-signin">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="name">
+                        <label class="mdl-textfield__label" class="form-control">Nombre</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="description">
+                        <label class="mdl-textfield__label" class="form-control">Descripcion</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <label class="mdl-textfield__label" class="form-control">Tipo</label>
+                        <select name="type">
+                        <option value="Feature">Feature</option>
+                        <option value="Bug">Bug</option>
+                        <option value="Chore">Chore</option>
+                        </select>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="actions">
+                        <label class="mdl-textfield__label" class="form-control">Action</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" class="form-control" type="text" name="user_story_id">
+                        <label class="mdl-textfield__label" class="form-control">User Story</label>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>

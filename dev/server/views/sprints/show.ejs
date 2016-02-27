@@ -1,0 +1,16 @@
+<div align="center">
+	<div class="mdl-card">
+	  <div class="mdl-card__title" align="center">
+	     <h3 class="mdl-card__title-text"><%= sprints.nombre %></h3>
+	  </div>
+	  	<%= sprints.inicio %>
+	  	<%= sprints.fin %>
+	  <div class="mdl-card__supporting-text">
+	  </div>
+	  <div class="mdl-card__actions">
+	     <form action="/sprints/edit/<%=sprints.id%>" method="POST">
+	  		<button type="submit">Editar</button>
+	  	</form>
+	  </div>
+	</div>
+</div>

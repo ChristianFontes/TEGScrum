@@ -1,0 +1,34 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">New Sprint</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNewSprint()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+  <form ng-submit="doNewSprint()">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" name="nombre" placeholder="Nombre del Sprint" ng-model="sprintData.nombre" required="required">
+      </label>
+      <label class="item item-input">
+        <input type="date" name="inicio" placeholder="Inicio del Sprint" ng-model="sprintData.inicio" required="required">
+      </label>
+      <label class="item item-input">
+        <input type="date" name="fin" placeholder="Fin del Sprint" ng-model="sprintData.fin" required="required">
+      </label>
+      <div ng-controller="ProjectCtrl">
+        <div ng-repeat="a in projectarray">
+        <ion-list ng-model="list_users" ng-repeat="e in a.user_story | filter:{sprint_nombre: null}" ng-class="getSelectedClass(e.id)">
+          <ion-checkbox name="selected" ng-checked="isSelected(e.id)" ng-click="updateSelection($event, e.id)">{{e.nombre}}
+          </ion-checkbox>
+        </ion-list>
+        </div>
+      </div>
+      <label class="item">
+        <button class="button button-block button-positive" type="submit">Register</button>
+      </label>
+    </div>
+  </form>
+  </ion-content>
+</ion-modal-view>

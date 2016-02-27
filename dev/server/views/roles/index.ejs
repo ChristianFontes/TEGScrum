@@ -1,0 +1,25 @@
+<table align="center" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">ID</th>
+      <th>Poder</th>
+      <th>Mostrar</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% _.roles, function(roles){ %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric"><%= roles.id %></td>
+      <td><%= roles.power %></td>
+      <td><a href="/roles/show/<%= roles.id %>" class="mdl-button mdl-js-button mdl-button--primary">Mostrar</a></td>
+      <td>
+        <form action="/roles/destroy/<%= roles.id %>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" class="mdl-button mdl-js-button mdl-button--primary" value="Eliminar">
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>
